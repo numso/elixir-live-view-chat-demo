@@ -17,7 +17,8 @@ defmodule KualiChatWeb.Router do
   scope "/", KualiChatWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
+    live "/", ChatLive
   end
 
   # Other scopes may use custom stacks.

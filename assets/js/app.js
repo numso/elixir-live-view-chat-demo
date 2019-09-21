@@ -19,5 +19,21 @@ import 'phoenix_html'
 import { Socket } from 'phoenix'
 import LiveSocket from 'phoenix_live_view'
 
-let liveSocket = new LiveSocket('/live', Socket)
+const hooks = {}
+hooks.Composer = {
+  mounted() {
+    this.el.focus()
+  }
+}
+
+hooks.Dinger = {
+  mounted() {
+    console.log('ding')
+  },
+  updated() {
+    console.log('updated')
+  }
+}
+
+let liveSocket = new LiveSocket('/live', Socket, { hooks })
 liveSocket.connect()

@@ -2,3 +2,13 @@
 
 @import './phoenix.css';
 @import '../../deps/phoenix_live_view/assets/css/live_view.css';
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+}

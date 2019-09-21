@@ -1,0 +1,18 @@
+<button phx-click="inc">Click Me</button>
+<p><%= @count %></p>
+
+<hr />
+
+<main>
+  <%= for msg <- @messages do %>
+    <div class="message" phx-hook="Dinger">
+      <%= msg %>
+    </div>
+  <% end %>
+</main>
+<footer>
+  <%= form_tag "#", phx_change: "update", phx_submit: "send_message" %>
+    <%= text_input :message, :body, value: @current_message, phx_hook: "Composer", placeholder: "Say something..." %>
+    <%= submit "Send" %>
+  </form>
+</footer>
