@@ -51,7 +51,7 @@ config :kuali_chat, KualiChatWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/kuali_chat_web/{live,views}/.*(ex)$",
+      ~r"lib/kuali_chat_web/(live|views)/.*(ex)$",
       ~r"lib/kuali_chat_web/templates/.*(eex)$"
     ]
   ]

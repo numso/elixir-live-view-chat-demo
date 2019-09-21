@@ -1,6 +1,8 @@
 defmodule KualiChatWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :kuali_chat
 
+  socket "/live", Phoenix.LiveView.Socket
+
   socket "/socket", KualiChatWeb.UserSocket,
     websocket: true,
     longpoll: false
